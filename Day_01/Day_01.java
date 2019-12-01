@@ -8,12 +8,9 @@ public class Day_01 {
 		Scanner sc = new Scanner(System.in);
 		while (sc.hasNextInt()) {
 			int mass = sc.nextInt();
-
 			int fuel = mass / 3 - 2;
-			baseSum += fuel;
-			totalSum += fuel;
 
-			fuel = fuel / 3 - 2;
+			baseSum += fuel;
 			while (fuel > 0) {
 				totalSum += fuel;
 				fuel = fuel / 3 - 2;

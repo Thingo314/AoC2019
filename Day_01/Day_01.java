@@ -13,10 +13,10 @@ public class Day_01 {
 			baseSum += fuel;
 			totalSum += fuel;
 
-			int fuelForfuel = fuel / 3 - 2;
-			while (fuelForfuel > 0) {
-				totalSum += fuelForfuel;
-				fuelForfuel = fuelForfuel / 3 - 2;
+			fuel = fuel / 3 - 2;
+			while (fuel > 0) {
+				totalSum += fuel;
+				fuel = fuel / 3 - 2;
 			}
 		}
 		sc.close();

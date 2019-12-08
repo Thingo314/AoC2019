@@ -47,11 +47,9 @@ public class Day_08 {
 				for (int k = 0; k < width; k++) {
 					if (image[j][k] == 0) {
 						if (imageLayers[i][j][k] == '0') {
-							image[j][k] = 32;
-							// 32 corresponds to a space
+							image[j][k] = ' ';
 						} else if (imageLayers[i][j][k] == '1') {
-							image[j][k] = 9646;
-							// 9646 corresponds to a black vertical rectangle
+							image[j][k] = '*';
 						}
 					}
 				}

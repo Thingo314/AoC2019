@@ -44,13 +44,13 @@ public class Day_19 {
 		int closestY = Integer.MAX_VALUE / 2;
 		boolean foundSquare = false;
 
-		for (int i = 0; i < inBeam.size() - 100; i++) {
-			for (int j = 0; j < inBeam.get(0).size() - 100; j++) {
+		for (int i = 0; i < inBeam.size() - size; i++) {
+			for (int j = 0; j < inBeam.get(0).size() - size; j++) {
 				if (!inBeam.get(i).get(j))
 					continue;
-				if (!inBeam.get(i + 99).get(j))
+				if (!inBeam.get(i + size - 1).get(j))
 					continue;
-				if (!inBeam.get(i).get(j + 99))
+				if (!inBeam.get(i).get(j + size - 1))
 					continue;
 				
 				if (closestX + closestY > i + j) {

@@ -85,19 +85,15 @@ public class Day_18 {
 
 					if (!visited.containsKey(nextPositions))
 						visited.put(nextPositions, new HashMap<>());
-					if (!visited.get(nextPositions).containsKey(nextKeys)) {
+					if (!visited.get(nextPositions).containsKey(nextKeys))
 						visited.get(nextPositions).put(nextKeys, Integer.MAX_VALUE);
-						// SearchNode nextNode = new SearchNode(nextPositions, nextSteps, nextKeys);
-						// nodes.add(nextNode);
+					
+					int searchedSteps = visited.get(nextPositions).get(nextKeys);
+					if (searchedSteps > nextSteps) {
+						visited.get(nextPositions).put(nextKeys, nextSteps);
+						SearchNode nextNode = new SearchNode(nextPositions, nextSteps, nextKeys);
+						nodes.add(nextNode);
 					}
-					// } else {
-						int searchedSteps = visited.get(nextPositions).get(nextKeys);
-						if (searchedSteps > nextSteps) {
-							visited.get(nextPositions).put(nextKeys, nextSteps);
-							SearchNode nextNode = new SearchNode(nextPositions, nextSteps, nextKeys);
-							nodes.add(nextNode);
-						}
-
 				}
 			}
 		}
